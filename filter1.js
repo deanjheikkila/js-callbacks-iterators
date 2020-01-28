@@ -24,3 +24,6 @@ var isCool = function(person) {
 }
 
 // Your code goes here
+
+var coolPeople = people.filter(isCool);
+console.log(coolPeople);
