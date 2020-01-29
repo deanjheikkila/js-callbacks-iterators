@@ -1,4 +1,4 @@
-var phoneBook = [
+var phonebook = [
   {Abe: "111-111-1111"},
    {Bob: "222-222-2222"},
    {Cam: "333-333-3333"},
@@ -31,3 +31,33 @@ var phoneBook = [
 // For example, the 0th element of the new array should be {Abe: "1-111-111-1111"}
 
 //Your code here
+// phonebook.forEach(function(item, index) {
+//   console.log (item, index);
+//   for (name in item){
+//     item[name] = item[name][0] + "-" + item[name];
+//   }
+// });
+// console.log(phonebook);
+
+//console.log(phonebook.map(addCountryCode))
+
+// alternate method 
+// phonebook.forEach(function(item, index) {
+//   console.log(item[Object.keys(item)]);
+// });
+
+// alternate method
+function addCountryCodes() {
+  var newNum= "";
+  phonebook.forEach(function(item, index) {
+    for (let name in item){
+      let origNum = item[name];
+      let newCode = item[name][0] + "-";
+      item[name] = newCode + origNum;
+      newNum = item.name;
+    }
+  });
+  return item[name] = newNum;
+}
+
+
